@@ -1,16 +1,18 @@
-import { useMemo, useState } from "react";
-import UseMemoLab from "./labs/UseMemoLab.jsx";
-import UseCallbackLab from "./labs/UseCallbackLab.jsx";
-import UseContextLab from "./labs/UseContextLab.jsx";
-import UseReducerLab from "./labs/UseReducerLab.jsx";
-import UseStateLab from "./labs/UseStateLab.jsx";
-import UseEffectLab from "./labs/UseEffectLab.jsx";
-import UseRefLab from "./labs/UseRefLab.jsx";
-import UseIdLab from "./labs/UseIdLab.jsx";
-import UseToggleDemo from "./labs/UseToggleDemo.jsx";
-import UseInputDemo from "./labs/UseInputDemo.jsx";
-import UseDebounceDemo from "./labs/UseDebounceDemo.jsx";
-import UsePreviousDemo from "./labs/UsePreviousDemo.jsx";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import UseStateLab from './labs/UseStateLab'
+import UseEffectLab from './labs/UseEffectLab'
+import UseRefLab from './labs/UseRefLab'
+import UseIdLab from './labs/UseIdLab'
+import UseMemoLab from './labs/UseMemoLab'
+import UseCallbackLab from './labs/UseCallbackLab'
+import UseReducerLab from './labs/UseReducerLab'
+import UseToggleDemo from './labs/UseToggleDemo'
+import UseInputDemo from './labs/UseInputDemo'
+import UseDebounceDemo from './labs/UseDebounceDemo'
+import UsePreviousDemo from './labs/UsePreviousDemo'
 
 const LABS = [
   {
@@ -25,19 +27,19 @@ const LABS = [
     title: "Timer + Cleanup",
     Comp: UseEffectLab,
   },
-  {
+   {
     day: "Day 1",
     key: "useRef",
     title: "Focus + Previous Value",
     Comp: UseRefLab,
   },
-  {
+   { day: "Day 1", key: "useId", title: "Accessible Form IDs", Comp: UseIdLab },
+    {
     day: "Day 2",
     key: "useMemo",
     title: "Cached Derived Value",
     Comp: UseMemoLab,
-  },
-  {
+  },{
     day: "Day 2",
     key: "useCallback",
     title: "Stable Function Identity",
@@ -48,8 +50,7 @@ const LABS = [
     key: "useContext",
     title: "No Prop Drilling",
     Comp: UseContextLab,
-  },
-  {
+  },{
     day: "Day 2",
     key: "useReducer",
     title: "State Machine",
@@ -78,8 +79,7 @@ const LABS = [
     key: "usePrevious",
     title: "Custom Hook: Previous",
     Comp: UsePreviousDemo,
-  },
-  { day: "Day 1", key: "useId", title: "Accessible Form IDs", Comp: UseIdLab },
+  }
 ];
 
 export default function App() {
@@ -121,7 +121,7 @@ export default function App() {
 
       <div className="layout">
         <aside className="nav glass">
-          {["Day 1", "Day 2", "Day 3"].map((d) => (
+          {["Day 1","Day 2", "Day 3"].map((d) => (
             <div key={d} className="group">
               <div className="groupTitle">{d}</div>
 
@@ -156,3 +156,5 @@ export default function App() {
     </div>
   );
 }
+
+
